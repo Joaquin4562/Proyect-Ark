@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:padding="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:cardBackgroundColor="#C8D2F0CC"
+        app:cardMaxElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imagenBrahma"
+                android:layout_width="384dp"
+                android:layout_height="216dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/brahma" />
+
+            <LinearLayout
+                android:layout_width="396dp"
+                android:layout_height="251dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/nombreRaza"
+                    android:layout_width="match_parent"
+                    android:layout_height="74dp"
+                    android:layout_margin="5dp"
+                    android:text="Brahma"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="false"
+                    android:textSize="36sp" />
+
+                <TextView
+                    android:id="@+id/desc"
+                    android:layout_width="194dp"
+                    android:layout_height="151dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="La raza de ganado brahman tiene su origen en el ganado cebú llevado originariamente a los Estados Unidos de América proveniente de la India."
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
