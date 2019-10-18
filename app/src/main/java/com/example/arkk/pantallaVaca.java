@@ -29,7 +29,7 @@ public class pantallaVaca extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla_vaca);
 
-        recyclerViewRazas = (RecyclerView) findViewById(R.id.recyclerRazas);
+        recyclerViewRazas =findViewById(R.id.recyclerRazas);
         recyclerViewRazas.setLayoutManager(new LinearLayoutManager(this));
         Send=findViewById(R.id.send);
         Temp=findViewById(R.id.spinnerTemp);
@@ -51,14 +51,22 @@ public class pantallaVaca extends AppCompatActivity {
         Send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                recyclerViewRazas.setAdapter(new RecyclerViewAdaptador(obtenerFiltro(BuscarFiltro.getText().toString()), new RecyclerViewOnItemClickListener() {
+                if(BuscarFiltro.getText().toString().equals("")){
+                    recyclerViewRazas.setAdapter(new RecyclerViewAdaptador(obtenerFiltro(BuscarFiltro.getText().toString()), new RecyclerViewOnItemClickListener() {
+                        @Override
+                        public void onClick(View v, int position) {
+                            Intent intent= new Intent(pantallaVaca.this,pantallaInformacionVaca.class  );
+                            startActivity(intent);
+                        }
+                    }));
+                }
+                recyclerViewRazas.setAdapter(new RecyclerViewAdaptador(FiltroSpinner(), new RecyclerViewOnItemClickListener() {
                     @Override
                     public void onClick(View v, int position) {
                         Intent intent= new Intent(pantallaVaca.this,pantallaInformacionVaca.class  );
                         startActivity(intent);
                     }
                 }));
-
             }
         });
         BuscarFiltro=findViewById(R.id.Buscar);
