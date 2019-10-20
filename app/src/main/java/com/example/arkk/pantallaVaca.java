@@ -51,7 +51,7 @@ public class pantallaVaca extends AppCompatActivity {
         Send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(BuscarFiltro.getText().toString().equals("")){
+                if(!BuscarFiltro.getText().toString().equals("")){
                     recyclerViewRazas.setAdapter(new RecyclerViewAdaptador(obtenerFiltro(BuscarFiltro.getText().toString()), new RecyclerViewOnItemClickListener() {
                         @Override
                         public void onClick(View v, int position) {
@@ -59,14 +59,21 @@ public class pantallaVaca extends AppCompatActivity {
                             startActivity(intent);
                         }
                     }));
-                }
-                recyclerViewRazas.setAdapter(new RecyclerViewAdaptador(FiltroSpinner(), new RecyclerViewOnItemClickListener() {
-                    @Override
-                    public void onClick(View v, int position) {
-                        Intent intent= new Intent(pantallaVaca.this,pantallaInformacionVaca.class  );
-                        startActivity(intent);
+                }else{
+                    Toast.makeText(pantallaVaca.this, "Asegurese de haber escrito algo", Toast.LENGTH_SHORT).show();
+                    if (!Temp.getSelectedItem().toString().equals("Temperatura") && !Esp.getSelectedItem().toString().equals("Especialidad")){
+                        recyclerViewRazas.setAdapter(new RecyclerViewAdaptador(FiltroSpinner(), new RecyclerViewOnItemClickListener() {
+                            @Override
+                            public void onClick(View v, int position) {
+                                Intent intent= new Intent(pantallaVaca.this,pantallaInformacionVaca.class  );
+                                startActivity(intent);
+                            }
+                        }));
+                    }else{
+                        Toast.makeText(pantallaVaca.this, "Asegurese de tener campos seleccionados", Toast.LENGTH_SHORT).show();
                     }
-                }));
+                }
+                
             }
         });
         BuscarFiltro=findViewById(R.id.Buscar);
