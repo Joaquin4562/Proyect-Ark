@@ -16,6 +16,7 @@ public class MenuPrincipal extends AppCompatActivity {
     Button abrirBusquedaAnimal;
     Button abrirGaleria;
     Button abrirNoticias;
+    Button abrirComparar;
     Button abrirMapa;
     Spinner opciones;
 
@@ -30,6 +31,14 @@ public class MenuPrincipal extends AppCompatActivity {
             public void onClick(View v) {
                 Intent abrirBusquedaAnimal = new Intent(MenuPrincipal.this,BuscarAnimales.class);
                 startActivity(abrirBusquedaAnimal);
+            }
+        });
+        abrirComparar = (Button) findViewById(R.id.comparar);
+        abrirComparar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent abrirComparar = new Intent(MenuPrincipal.this,pantallaComparar.class);
+                startActivity(abrirComparar);
             }
         });
 
@@ -59,12 +68,6 @@ public class MenuPrincipal extends AppCompatActivity {
                 startActivity(abrirMapa);
             }
         });
-
-        opciones = (Spinner) findViewById(R.id.spinner);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.opciones,android.R.layout.simple_spinner_item);
-        opciones.setAdapter(adapter);
-
-
 
     }
 }

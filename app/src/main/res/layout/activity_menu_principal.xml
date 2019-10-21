@@ -4,68 +4,104 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/xd"
+    android:background="@drawable/fondocom"
     tools:context=".MenuPrincipal">
 
-    <Button
-        android:id="@+id/BuscarAnimales"
-        android:layout_width="152dp"
-        android:layout_height="135dp"
-        android:background="@drawable/animales"
+    <ScrollView
+        android:layout_width="320dp"
+        android:layout_height="395dp"
+        android:focusableInTouchMode="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.48000002" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.585">
 
-    <Button
-        android:id="@+id/galeria"
-        android:layout_width="152dp"
-        android:layout_height="135dp"
-        android:background="@drawable/galeria"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.096"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.825" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/mapa"
-        android:layout_width="152dp"
-        android:layout_height="135dp"
-        android:layout_marginEnd="24dp"
-        android:background="@drawable/mapaa"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.825" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/noticias"
-        android:layout_width="152dp"
-        android:layout_height="135dp"
-        android:layout_marginEnd="24dp"
-        android:background="@drawable/noticias"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.48000002" />
+                <Button
+                    android:id="@+id/BuscarAnimales"
+                    android:layout_width="152dp"
+                    android:layout_height="135dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/animales" />
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="164dp"
-        android:layout_height="26dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.982"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/mapa"
+                        android:layout_width="152dp"
+                        android:layout_height="135dp"
+                        android:layout_margin="5dp"
+                        android:layout_marginEnd="24dp"
+                        android:background="@drawable/mapaa" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/noticias"
+                        android:layout_width="152dp"
+                        android:layout_height="135dp"
+                        android:layout_margin="5dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:background="@drawable/noticias"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.52"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/comparar"
+                        android:layout_width="152dp"
+                        android:layout_height="135dp"
+                        android:layout_margin="5dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/bcomp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/galeria"
+                android:layout_width="152dp"
+                android:layout_height="135dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/galeria" />
+
+        </LinearLayout>
+    </ScrollView>
 
     <ImageView
         android:id="@+id/imageView"

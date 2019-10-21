@@ -4,9 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondoinfo"
+    android:background="@drawable/fondocom"
 
     tools:context=".pantallaInformacionVaca">
+
+    <ImageView
+        android:id="@+id/imagenVaca"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/iipardo" />
 
     <Button
         android:id="@+id/comparar"
@@ -17,13 +29,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976" />
+        app:layout_constraintVertical_bias="0.97" />
 
     <ScrollView
         android:id="@+id/scrollView3"
         android:layout_width="526dp"
         android:layout_height="318dp"
-        android:background="#48FFFFFF"
+        android:background="#6F0C1D0D"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -51,130 +63,143 @@
                         android:id="@+id/longevidad"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="1"
                         android:text="Longevidad:"
-                        android:textColor="#000000"
+                        android:textColor="#FFFFFF"
                         android:textSize="18sp" />
 
                     <TextView
                         android:id="@+id/tempmax"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="1"
                         android:text="Temperatura maxíma:"
-                        android:textColor="#000000"
+                        android:textColor="#FFFFFF"
                         android:textSize="18sp" />
 
                     <TextView
                         android:id="@+id/tempmin"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="1"
                         android:text="Temperatura miníma:"
-                        android:textColor="#000000"
+                        android:textColor="#FDFDFD"
                         android:textSize="18sp" />
 
                     <TextView
                         android:id="@+id/pesoP"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="1"
                         android:text="Peso promedio:"
-                        android:textColor="#000000"
+                        android:textColor="#FFFFFF"
                         android:textSize="18sp" />
 
                     <TextView
                         android:id="@+id/litrosLeche"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="1"
                         android:text="Litros de leche al año:"
-                        android:textColor="#000000"
+                        android:textColor="#FFFFFF"
                         android:textSize="18sp" />
 
                     <TextView
                         android:id="@+id/crias"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="1"
                         android:text="Crías en vida productiva:"
-                        android:textColor="#000000"
+                        android:textColor="#FFFFFF"
                         android:textSize="18sp" />
 
                     <TextView
                         android:id="@+id/enfermedades"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="1"
                         android:text="Enfermdades propensas:"
-                        android:textColor="#000000"
+                        android:textColor="#FFFFFF"
                         android:textSize="18sp" />
 
                     <TextView
                         android:id="@+id/especialidad"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="1"
                         android:text="Especialidad:"
-                        android:textColor="#000000"
+                        android:textColor="#FFFFFF"
                         android:textSize="18sp" />
 
                     <TextView
                         android:id="@+id/periodoGestacion"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="1"
                         android:text="Periodo de gestación:"
-                        android:textColor="#000000"
+                        android:textColor="#FFFFFF"
                         android:textSize="18sp" />
 
                     <TextView
                         android:id="@+id/calidadLeche"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="1"
                         android:text="Calidad de leche:"
-                        android:textColor="#000000"
+                        android:textColor="#FFFFFF"
                         android:textSize="18sp" />
 
                     <TextView
                         android:id="@+id/propiedadesLeche"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="1"
                         android:text="Propiedades de la leche:"
-                        android:textColor="#000000"
+                        android:textColor="#FFFFFF"
                         android:textSize="18sp" />
 
                     <TextView
                         android:id="@+id/temperamento"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="1"
                         android:text="Temperamento:"
-                        android:textColor="#000000"
+                        android:textColor="#FFFFFF"
                         android:textSize="18sp" />
 
                     <TextView
                         android:id="@+id/tipoCuerpo"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
                         android:layout_marginStart="10dp"
                         android:layout_weight="1"
                         android:text="Tipo de cuero:"
-                        android:textColor="#000000"
+                        android:textColor="#FFFFFF"
                         android:textSize="18sp" />
                 </LinearLayout>
 
@@ -182,18 +207,6 @@
 
         </LinearLayout>
     </ScrollView>
-
-    <ImageView
-        android:id="@+id/imagenVaca"
-        android:layout_width="427dp"
-        android:layout_height="193dp"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.24000001"
-        app:srcCompat="@drawable/brahma" />
 
     <TextView
         android:id="@+id/raza"
@@ -209,6 +222,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.81" />
+        app:layout_constraintVertical_bias="0.428" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
