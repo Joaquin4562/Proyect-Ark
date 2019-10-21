@@ -8,49 +8,17 @@
     android:background="@drawable/fondoinfo2"
     tools:context=".pantallaComparar">
 
-    <RadioGroup
-        android:id="@+id/r"
-        android:layout_width="153dp"
-        android:layout_height="83dp"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.15"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.86">
-
-        <RadioButton
-            android:id="@+id/r1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="ObtenerVaca"
-            android:text="Brahman" />
-
-        <RadioButton
-            android:id="@+id/r2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="ObtenerVacaPardo"
-            android:text="Pardo suiza" />
-
-        <RadioButton
-            android:id="@+id/r3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="ObtenerVacaSimbrah"
-            android:text="Simbrah" />
-    </RadioGroup>
-
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="415dp"
-        android:layout_height="543dp"
+        android:layout_width="407dp"
+        android:layout_height="494dp"
         android:background="#48FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -94,7 +62,7 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="256dp"
                         android:layout_marginTop="15dp"
                         android:layout_weight="1"
                         android:orientation="vertical">
@@ -188,7 +156,7 @@
 
                         <TextView
                             android:id="@+id/calidadLeche"
-                            android:layout_width="match_parent"
+                            android:layout_width="203dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
                             android:layout_marginTop="5dp"
@@ -209,7 +177,7 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="245dp"
                         android:orientation="vertical">
 
                         <TextView
@@ -317,37 +285,47 @@
         </LinearLayout>
     </ScrollView>
 
-    <RadioGroup
-        android:id="@+id/r6"
-        android:layout_width="153dp"
-        android:layout_height="83dp"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.937"
+    <SearchView
+        android:id="@+id/search"
+        android:layout_width="203dp"
+        android:layout_height="47dp"
+        android:backgroundTint="?attr/actionModeSplitBackground"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.86">
+        app:layout_constraintVertical_bias="0.058" />
 
-        <RadioButton
-            android:id="@+id/radioButton4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="ObtenerVaca2Brahman"
-            android:text="Brahman" />
+    <ListView
+        android:id="@+id/lis"
+        android:layout_width="203dp"
+        android:layout_height="143dp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.79" />
 
-        <RadioButton
-            android:id="@+id/radioButton5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="ObtenerVaca2Pardo"
-            android:text="Pardo suiza" />
+    <SearchView
+        android:id="@+id/search2"
+        android:layout_width="203dp"
+        android:layout_height="47dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.975"
+        app:layout_constraintStart_toStartOf="@+id/search"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.058" />
 
-        <RadioButton
-            android:id="@+id/radioButton6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="ObtenerVaca2Simbrah"
-            android:text="Simbrah" />
-    </RadioGroup>
+    <ListView
+        android:id="@+id/lis2"
+        android:layout_width="203dp"
+        android:layout_height="143dp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.79" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
