@@ -60,7 +60,6 @@ public class pantallaVaca extends AppCompatActivity {
                         }
                     }));
                 }else{
-                    Toast.makeText(pantallaVaca.this, "Asegurese de haber escrito algo", Toast.LENGTH_SHORT).show();
                     if (!Temp.getSelectedItem().toString().equals("Temperatura") && !Esp.getSelectedItem().toString().equals("Especialidad")){
                         recyclerViewRazas.setAdapter(new RecyclerViewAdaptador(FiltroSpinner(), new RecyclerViewOnItemClickListener() {
                             @Override
@@ -72,6 +71,7 @@ public class pantallaVaca extends AppCompatActivity {
                     }else{
                         Toast.makeText(pantallaVaca.this, "Asegurese de tener campos seleccionados", Toast.LENGTH_SHORT).show();
                     }
+                    Toast.makeText(pantallaVaca.this, "Asegurese de haber escrito algo", Toast.LENGTH_SHORT).show();
                 }
                 
             }
@@ -94,20 +94,25 @@ public class pantallaVaca extends AppCompatActivity {
         try {
             ResultSet rs= new Conexcion().ConsultaBD("Select Raza from Vacas");
 
-            while(rs.next()){
-                if(rs.getString("Raza").equals("Pardo suiza")){
-                    if(rs.getString("Raza").toLowerCase().contains(filtro)) {
-                        vaca.add(new razaVacas(rs.getString("Raza"), "", R.drawable.pardasuiza));
-                    }
-                }else if(rs.getString("Raza").equals("Simbrah")){
-                    if(rs.getString("Raza").toLowerCase().contains(filtro)) {
-                        vaca.add(new razaVacas(rs.getString("Raza"), "", R.drawable.simbrah));
-                    }
-                }else if (rs.getString("Raza").equals("Brahman")){
-                    if(rs.getString("Raza").toLowerCase().contains(filtro)) {
-                        vaca.add(new razaVacas(rs.getString("Raza"), "", R.drawable.brahma));
-                    }
+            while(rs.next()) {
+                switch (rs.getString("Raza")) {
+                    case "Pardo suiza":
+                        if (rs.getString("Raza").toLowerCase().contains(filtro)) {
+                            vaca.add(new razaVacas(rs.getString("Raza"), "", R.drawable.pardasuiza));
+                        }
+                        break;
+                    case "Simbrah":
+                        if (rs.getString("Raza").toLowerCase().contains(filtro)) {
+                            vaca.add(new razaVacas(rs.getString("Raza"), "", R.drawable.simbrah));
+                        }
+                        break;
+                    case "Brahman":
+                        if (rs.getString("Raza").toLowerCase().contains(filtro)) {
+                            vaca.add(new razaVacas(rs.getString("Raza"), "", R.drawable.brahma));
+                        }
+                        break;
                 }
+
 
 
             }
@@ -123,12 +128,19 @@ public class pantallaVaca extends AppCompatActivity {
             ResultSet rs= new Conexcion().ConsultaBD("Select Raza from Vacas");
 
             while(rs.next()){
-                if(rs.getString("Raza").equals("Pardo suiza")){
-                    vaca.add(new razaVacas(rs.getString("Raza"),"",R.drawable.pardasuiza));
-                }else if(rs.getString("Raza").equals("Simbrah")){
-                    vaca.add(new razaVacas(rs.getString("Raza"),"",R.drawable.simbrah));
-                }else if (rs.getString("Raza").equals("Brahman")){
-                    vaca.add(new razaVacas(rs.getString("Raza"),"",R.drawable.brahma));
+                switch (rs.getString("Raza")) {
+                    case "Pardo suiza":
+                            vaca.add(new razaVacas(rs.getString("Raza"), "", R.drawable.pardasuiza));
+
+                        break;
+                    case "Simbrah":
+                            vaca.add(new razaVacas(rs.getString("Raza"), "", R.drawable.simbrah));
+
+                        break;
+                    case "Brahman":
+                            vaca.add(new razaVacas(rs.getString("Raza"), "", R.drawable.brahma));
+
+                        break;
                 }
 
 
@@ -162,12 +174,19 @@ public class pantallaVaca extends AppCompatActivity {
             ResultSet rs= new Conexcion().ConsultaBD(""+consulta+"");
 
             while(rs.next()){
-                if(rs.getString("Raza").equals("Pardo suiza")){
-                    vaca.add(new razaVacas(rs.getString("Raza"),"",R.drawable.pardasuiza));
-                }else if(rs.getString("Raza").equals("Simbrah")){
-                    vaca.add(new razaVacas(rs.getString("Raza"),"",R.drawable.simbrah));
-                }else if (rs.getString("Raza").equals("Brahman")){
-                    vaca.add(new razaVacas(rs.getString("Raza"),"",R.drawable.brahma));
+                switch (rs.getString("Raza")) {
+                    case "Pardo suiza":
+                        vaca.add(new razaVacas(rs.getString("Raza"), "", R.drawable.pardasuiza));
+
+                        break;
+                    case "Simbrah":
+                        vaca.add(new razaVacas(rs.getString("Raza"), "", R.drawable.simbrah));
+
+                        break;
+                    case "Brahman":
+                        vaca.add(new razaVacas(rs.getString("Raza"), "", R.drawable.brahma));
+
+                        break;
                 }
             }
         }catch(Exception e){
