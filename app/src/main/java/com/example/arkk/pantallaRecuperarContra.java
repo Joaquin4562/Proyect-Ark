@@ -1,4 +1,4 @@
-﻿package com.example.arkk;
+package com.example.arkk;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;

@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         abrirRecuperarContra = (Button) findViewById(R.id.BotonRecuperar);
 
         Usuario = (EditText) findViewById(R.id.Usuario);
-        Contra = (EditText) findViewById(R.id.contraseña);
+        Contra = (EditText) findViewById(R.id.Contraseña);
         Usuarios objE = new Usuarios ("Admin", "12345");
         Usuarios.add(objE);
     }
