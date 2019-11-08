@@ -83,8 +83,6 @@ public class pantallaVaca extends AppCompatActivity {
             public void onClick(View v, int position) {
                 Intent intent= new Intent(pantallaVaca.this,pantallaInformacionVaca.class  );
                 startActivity(intent);
-
-
             }
         }));
 
